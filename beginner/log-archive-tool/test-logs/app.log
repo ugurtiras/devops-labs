@@ -1,0 +1,35 @@
+[2026-02-05 08:00:12] INFO  Application starting...
+[2026-02-05 08:00:13] INFO  Loading configuration from /etc/myapp/config.yaml
+[2026-02-05 08:00:14] INFO  Database connection established (PostgreSQL 15.2)
+[2026-02-05 08:00:14] INFO  Redis cache connected at localhost:6379
+[2026-02-05 08:00:15] INFO  Starting HTTP server on port 8080
+[2026-02-05 08:00:15] INFO  Health check endpoint: /api/health
+[2026-02-05 08:00:16] INFO  Application ready - accepting requests
+[2026-02-05 08:15:33] INFO  GET /api/users - 200 OK (23ms)
+[2026-02-05 08:15:45] INFO  GET /api/users/142 - 200 OK (18ms)
+[2026-02-05 08:22:01] INFO  POST /api/orders - 201 Created (156ms)
+[2026-02-05 08:22:02] INFO  Order #10234 created for user_id=142
+[2026-02-05 08:45:12] INFO  GET /api/products?category=electronics - 200 OK (45ms)
+[2026-02-05 09:00:00] INFO  Running scheduled task: cleanup_expired_sessions
+[2026-02-05 09:00:01] INFO  Removed 847 expired sessions
+[2026-02-05 09:12:33] INFO  PUT /api/users/142 - 200 OK (34ms)
+[2026-02-05 09:30:15] WARN  High memory usage detected: 78%
+[2026-02-05 09:45:00] INFO  GET /api/health - 200 OK (2ms)
+[2026-02-05 10:00:00] INFO  Running scheduled task: generate_daily_report
+[2026-02-05 10:00:45] INFO  Daily report generated: /var/reports/2026-02-05.pdf
+[2026-02-05 10:15:22] INFO  DELETE /api/orders/10201 - 204 No Content (28ms)
+[2026-02-05 11:30:00] INFO  Database backup started
+[2026-02-05 11:32:15] INFO  Database backup completed (2.3GB)
+[2026-02-05 12:00:00] INFO  Running scheduled task: sync_inventory
+[2026-02-05 12:00:33] INFO  Synced 1,247 inventory items
+[2026-02-05 14:22:10] INFO  New user registered: user_id=289
+[2026-02-05 14:22:11] INFO  Welcome email sent to user_id=289
+[2026-02-05 15:45:00] INFO  GET /api/health - 200 OK (1ms)
+[2026-02-05 16:30:22] INFO  POST /api/auth/login - 200 OK (89ms)
+[2026-02-05 16:30:23] INFO  User user_id=142 logged in from 192.168.1.105
+[2026-02-05 18:00:00] INFO  Running scheduled task: cleanup_temp_files
+[2026-02-05 18:00:02] INFO  Removed 23 temporary files (145MB freed)
+[2026-02-05 20:00:00] INFO  SSL certificate check: valid until 2026-08-15
+[2026-02-05 23:00:00] INFO  Running scheduled task: rotate_logs
+[2026-02-05 23:00:01] INFO  Log rotation completed
+[2026-02-06 00:00:00] INFO  Daily metrics: requests=12,847 errors=23 avg_response=45ms
